@@ -1,0 +1,33 @@
+
+
+first follow the guide on laravel doc to install and setup the laravel with reverb 
+
+1. there is no need to any configuration of the reverb outside the .env file each and evertything included in the laravel
+setup should be define in .env file and
+
+2. The most important thing is when the event trigger from the application it put in quequed jobs until you start the que worker of laravel
+ to broadcast the event trigger
+
+
+ //////////////////
+
+ install and setup the laravel reverb from laravel doc
+ install vue js 
+ install laravel telescop to look insight the jobs are quequed or processed by or pending by application 
+ these jobs included the event triggered by the broadcasting of the event
+ connect the database with it (important)
+ run the migrations 
+ migration also included the migration of laravel telescope
+
+ run these commands in seperate seperate terminal processes
+
+ php artisan serve
+ php artisan reverb:start 
+ npm run dev
+php artisan queue:work --queue=high,default  (start the queque worker) important
+
+now trigger the event and go to  <you-site-url/telescop> to look the event status which was triggered by the broadcast of the event
+
+
+
+and most important thing is to check the console of the brower of "ws" section for connection of ws and other related things of websocket
